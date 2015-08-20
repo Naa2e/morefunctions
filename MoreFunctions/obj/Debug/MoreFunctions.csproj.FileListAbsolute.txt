@@ -1,1 +1,6 @@
 C:\Users\Naa2e\Documents\GitHub\morefunctions\MoreFunctions\bin\Debug\MoreFunctions.exe.config
+C:\Users\Naa2e\Documents\GitHub\morefunctions\MoreFunctions\bin\Debug\MoreFunctions.exe
+C:\Users\Naa2e\Documents\GitHub\morefunctions\MoreFunctions\bin\Debug\MoreFunctions.pdb
+C:\Users\Naa2e\Documents\GitHub\morefunctions\MoreFunctions\obj\Debug\MoreFunctions.csprojResolveAssemblyReference.cache
+C:\Users\Naa2e\Documents\GitHub\morefunctions\MoreFunctions\obj\Debug\MoreFunctions.exe
+C:\Users\Naa2e\Documents\GitHub\morefunctions\MoreFunctions\obj\Debug\MoreFunctions.pdb

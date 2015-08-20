@@ -22,53 +22,62 @@ namespace MoreFunctions
         {
             if (n != 1)
             {
-                return n*recurfactorial(n - 1);
-            } else
+                return n * recurfactorial(n - 1);
+            }
+            else
             {
                 // This is the base case
                 return n;
             }
         }
 
+        public int[] swapInPlace(int[] inputs, int left_most_index, int right_most_index)
+        {
+            return null;
+        }
+
+        public bool isSorted(int[] inputs)
+        {
+            throw new NotImplementedException();
+        }
         public static int[] InsertionSort(int[] inputs)
         {
             var answer = new int[inputs.Length];
             var temp = new int[inputs.Length];
             // Get a forreal clone of this array.
             int[] copy_of_inputs = inputs.Clone() as int[];
-            for (var i = 0;i < inputs.Length; i++) {
-                var item = inputs[i];
-                var j = 0;
-                while (j < temp.Length)
+            var i = 0;
+            var j = i + 1;
+            var swapped = false;
+            while (i < copy_of_inputs.Length - 1 && swapped == false)
+            {
+                while (j < copy_of_inputs.Length) //
                 {
-                    var second_item = inputs[j];
-                    if (item > second_item)
-                    {                        
-                    //continue;
-                    }else if (item == second_item)
+                    var item = copy_of_inputs[i];
+                    var second_item = copy_of_inputs[j];
+                    if (item > second_item){
+                        // Let's swap. Seems useful...
+                        var tmpa = item;
+                        var tmpb = second_item;
+                        copy_of_inputs[i] = tmpb; // The item located at 'j'
+                        copy_of_inputs[j] = tmpa;
+                        //j++; // Keep an eye on this
+                        swapped = true;
+                    }
+                    if (j == copy_of_inputs.Length - 1)
                     {
-                    //continue;
-                    } else if (j == temp.Length - 1)
+                        i = 0;
+                        j = i + 1;
+                        break;
+                    } else
                     {
-                        // We've reached the end!!
-                        answer[j] = item;
-                        /*
-                       var tmp1 = item;
-                       var tmp2 = second_item;
-                       item = tmp2;
-                       second_item = tmp1;
-                       */
-                        //temp.Length-1
-                        // Leave it?
-                    }else if (item < second_item)
-                    {
-
+                        i++; //keep an eye on this
+                        j = i + 1;// The same as j++;
                     }
                 }
-
-                //var item2 = inputs[i+1];
             }
-            return answer;
+            return copy_of_inputs; //
         }
     }
 }
+
